@@ -8,27 +8,31 @@ public class EmployeeUseCase{
 		double empWage;
 		double empCheck=Math.floor(Math.random() * 10 ) %2;
 		System.out.println("Welcome to the Employee Use Case problem");
-
-		if (empCheck==IS_PRESENT){
+		
+		switch ((int) empCheck){
+		case 1:
 			int IS_FULLTIME=1;
 			double fullTimeCheck=Math.floor(Math.random()*10)%2;
-			
+
 			System.out.println("Employee is present");
 
-			if (fullTimeCheck==IS_FULLTIME){
+			switch ((int) fullTimeCheck){
+			case 1:
 				empWage=wagePerHour*fullDay;
 				System.out.println("Employee works fulltime and Employee wage is: "+ empWage);
-			}
-			else {
+
+			break;
+
+			default:
 				empWage=wagePerHour*halfDay;
                                 System.out.println("Employee works parttime and Employee wage is: "+ empWage);
+			break;
 			}
-		}
-		
 
-		else{
+		case 0:
 			System.out.println("Employee is absent");
 		}
+
 	}
 }
 
