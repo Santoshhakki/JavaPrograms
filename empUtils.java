@@ -18,15 +18,33 @@ public class empUtils{
                 }
                 else{
                         return(0);
-                }
-        }
+            	}
+	}
 
 	/**
-        *calculate the employee wage
+	*Check if the employee works parttime or fulltime
+	*@ return empWorks
+	*/
+
+	public int isFullTime(){
+
+		int IS_FULLTIME=1;
+		double isFulltime=Math.floor(Math.random()*10)%2;
+		if(isFulltime==IS_FULLTIME){
+			return(1);
+		}
+		else{
+			return(0);
+		}
+	}
+
+
+	/**
+        *calculate the fulltime employee wage
         * @ return employee wage
         */
 
-	public double wageCalculation(){
+	public double FtWageCalculation(){
 		double wagePerHour=20;
 		double fullDay=8;
 		double empWage;
@@ -34,4 +52,18 @@ public class empUtils{
 		empWage=wagePerHour*fullDay;
 		return(empWage);
 	}
+	
+	/**
+        *calculate the parttime employee wage
+        * @ return employee wage
+        */	
+	public double PtWageCalculation(){	
+		double wagePerHour=20;
+                double fullDay=4;
+                double empWage;
+
+                empWage=wagePerHour*fullDay;
+                return(empWage);
+        }
+
 }
