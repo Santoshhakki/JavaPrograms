@@ -18,8 +18,12 @@ public class EmpUsecase{
 
 		//Print if employee is present or absent
 		if(presence==1){
-			double wage=utils.wageCalculation();
-			System.out.println("Employee wage is "+wage);
+			if(utils.isFullTime()==1){
+				System.out.println("Employee wage for full time is "+ utils.FtWageCalculation());
+			}
+			else{
+				System.out.println("Employee wage for part time is "+ utils.PtWageCalculation());
+			}
 		}
 		else{
 			System.out.println("Employee is absent");
