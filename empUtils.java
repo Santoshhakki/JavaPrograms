@@ -20,4 +20,18 @@ public class empUtils{
                         return(0);
                 }
         }
+
+	/**
+        *calculate the employee wage
+        * @ return employee wage
+        */
+
+	public double wageCalculation(){
+		double wagePerHour=20;
+		double fullDay=8;
+		double empWage;
+
+		empWage=wagePerHour*fullDay;
+		return(empWage);
+	}
 }
