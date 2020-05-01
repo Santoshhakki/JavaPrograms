@@ -3,7 +3,7 @@
 *@author Akshay
 */
 
-public class empUseCaseObject{
+public class EmpUseCaseObject{
 	/**
 	*main method
 	*@param args args
@@ -13,10 +13,10 @@ public class empUseCaseObject{
 		System.out.println("Welcome to the employee usecase problem");
 
 		//Declare an empUtils object
-		empUtils utils=new empUtils();
-		utils.printName();
-		int presence=utils.isPresent();
-		int fullTime=utils.isFullTime();
+		Employee Amadeus=new Employee("Amadeus",20.0,8.0,4.0);
+		Amadeus.printName();
+		int presence=Amadeus.isPresent();
+		int fullTime=Amadeus.isFullTime();
 		int days=1;
 		//Check if the employee is present 
 		switch(presence){
@@ -26,7 +26,7 @@ public class empUseCaseObject{
 			case 1:
 				//Display the wage calculated
 				while(days<21){
-					double totalWage=days*utils.FtWageCalculation();
+					double totalWage=days*Amadeus.FtWageCalculation();
 					System.out.println("Employee wage for full time for day "+ days +" is "+ totalWage);
 					days++;
 				}
@@ -34,7 +34,7 @@ public class empUseCaseObject{
 			case 0:
 				//Display the wage calculated
                                 while(days<21){
-                                        double totalWage=days*utils.PtWageCalculation();
+                                        double totalWage=days*Amadeus.PtWageCalculation();
                                         System.out.println("Employee wage for part time for day "+ days +" is "+ totalWage);
                                         days++;
                                 }
