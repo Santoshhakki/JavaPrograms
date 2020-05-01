@@ -7,8 +7,8 @@ public class empUtils{
 
 	//print the name of the company
 
-	public void printName(){
-		Employee bridgelabz=new Employee("Bridgelabs",20.0,8.0,4.0); 
+	Employee bridgelabz=new Employee("Bridgelabs",20.0,8.0,4.0);
+	public void printName(){ 
 		System.out.println("Name of the company is "+ bridgelabz.companyName);
 	}
 
@@ -53,7 +53,6 @@ public class empUtils{
 
 	public double FtWageCalculation(){
 
-		Employee bridgelabz=new Employee("Bridgelabs",20.0,8.0,4.0);
 		double empWage;
 		empWage=bridgelabz.wagePerHour*bridgelabz.fullTime;
 		return(empWage);
@@ -63,8 +62,7 @@ public class empUtils{
         *calculate the parttime employee wage
         * @ return employee wage
         */	
-	public double PtWageCalculation(){
-		Employee bridgelabz=new Employee("Bridgelabs",20.0,8.0,4.0);	
+	public double PtWageCalculation(){	
 		double empWage;
                 empWage=bridgelabz.wagePerHour*bridgelabz.partTime;
                 return(empWage);
